@@ -1,0 +1,37 @@
+//Справочник сделан при поддержке телеграм бота https://t.me/Doczilla_bot
+
+import org.zenframework.z8.base.table.value.StringField;
+import org.zenframework.z8.base.table.Table;
+import pro.doczilla.dictionary.importFile.CsvDictionaryImportAction;
+ 
+[generatable]
+[dictionary]
+[request true]
+[name "List Microsoft Excel"]
+[displayName "Лист Microsoft Excel"]
+public class List Microsoft Excel extends Table
+{
+  [name "Test"]
+  [displayName "Тест"]
+  public StringField Test;
+  Test.length = 200;
+  Test.colSpan = 1;
+
+  [name "testovyj"]
+  [displayName "тестовый"]
+  public StringField testovyj;
+  testovyj.length = 200;
+  testovyj.colSpan = 1;
+
+  [name "dengi"]
+  [displayName "деньги"]
+  public StringField dengi;
+  dengi.length = 200;
+  dengi.colSpan = 1;
+
+
+  columns = {Test,testovyj,dengi};
+  controls  = {Test,testovyj,dengi};
+  actions = {importAction};
+  CsvDictionaryImportAction importAction;
+}
